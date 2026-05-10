@@ -1,0 +1,29 @@
+[package]
+version = "0.1.0"
+name = "sha256-zkpok-script"
+edition = "2021"
+default-run = "sha256-zkpok"
+
+[lib]
+name = "sha256_zkpok_script"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sha256-zkpok"
+path = "src/bin/main.rs"
+
+[[bin]]
+name = "pay-chain"
+path = "src/bin/pay_chain.rs"
+
+[dependencies]
+sp1-sdk    = { version = "6.0.1", features = ["blocking"] }
+clap       = { version = "4.0", features = ["derive", "env"] }
+hex        = "0.4.3"
+tracing    = "0.1.40"
+dotenv     = "0.15.0"
+sha2       = { version = "0.10" }
+k256       = { version = "0.13", features = ["arithmetic"] }
+
+[build-dependencies]
+sp1-build  = { version = "6.0.1" }

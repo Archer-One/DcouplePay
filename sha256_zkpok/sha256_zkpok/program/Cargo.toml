@@ -1,0 +1,9 @@
+[package]
+version = "0.1.0"
+name = "sha256-zkpok-program"
+edition = "2021"
+
+[dependencies]
+sp1-zkvm = { version = "6.0.1", features = ["lib"] }
+sha2     = { version = "0.10", default-features = false }
+k256     = { version = "0.13", default-features = false, features = ["arithmetic"] }
